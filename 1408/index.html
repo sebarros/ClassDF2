@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 2</title>
+</head>
+<body>
+    <h2>Bloque - Block</h2>
+    <div style="background-color: tomato;">Este es un div es un elemento en bloque</div>
+    <div style="background-color: tomato;">Este es un div es un elemento en bloque</div>
+
+    <h2>En linea - inline</h2>
+    <span style="background-color: blueviolet;"><a href="#">Soy un boton inline</a></span>
+    <span style="background-color: blueviolet;"><a href="#">Soy un boton inline</a></span>
+    <span style="background-color: blueviolet;"><a href="#">Soy un boton inline</a></span>
+
+    <section>
+        <h2>Formulario de contacto</h2>
+        <form action="Agradecimiento.html" method="post">
+            <!--Etiqueta-->
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <br><br>
+
+            <label for="email">Correo:</label>
+            <input type="email" id="email" name="email" required>
+            <br><br>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea name="mensaje" id="mensaje"></textarea>
+            <br><br>
+
+            <label for="pais">Escoge tu pais:</label>
+            <select name="pais" id="pais">
+                <option value="cl">Chile</option>
+                <option value="br">Brasil</option>
+                <option value="mx">Mexico</option>
+                <option value="ar">Argentina</option>
+                <option value="ve">Venezuela</option>
+                <option value="es">España</option>
+            </select>
+            <br><br>
+
+            <label for="checkbox">Acepta los terminos</label>
+            <input type="checkbox" name="checkbox" id="checkbox">
+            <br><br>
+
+            <label for="color">Escoge tu color favorito:</label>
+            <input type="color" name="color" id="color">
+            <br><br>
+
+            <label for="checkbox">Selecciona la fecha de la reserva:</label>
+            <input type="date" name="date" id="date">
+            <br><br>
+
+            <label for="file">Selecciona tu archivo:</label>
+            <input type="file" name="file" id="file">
+            <br><br>
+
+            <label for="file">Selecciona una opcion:</label>
+            <input type="radio" name="radio" id="radio">
+            <input type="radio" name="radio" id="radio">
+            <br><br>
+
+            <label for="pass">Agrega tu contraseña:</label>
+            <input type="password" name="pass" id="pass">
+            <br><br>
+
+            <label for="number">Number:</label>
+            <input type="number" name="number" id="number" min="0" max="5">
+            <br><br>
+
+            <label for="number">Number:</label>
+            <input type="number" name="number" id="number">
+            <br><br>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Multimedia</h2>
+        <audio controls>
+            <source src="audio.mp3" type="audio/mp3">
+            Tu navegador no soporta audio
+        </audio>
+        <h2>Video</h2>
+        <video controls width="400">
+            <source src="video.mp4">
+            Tu navegador no carga el video
+        </video>
+    </section>
+
+    <button popovertarget="info">Mostrar Info</button>
+    <div id="info" popover>
+        <p>Este es un popover emergente</p>
+        <button popovertarget="info">Cerrar</button>
+    </div>
+</body>
+</html>
