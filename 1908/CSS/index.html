@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Moderno</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            DevDuoc
+        </div>
+        <nav class="nav">
+            <a href="#inicio">Inicio</a>
+            <a href="#cursos">Cursos</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+    <main>
+        <section class="hero" id="inicio">
+            <span class="etiqueta">Full Stack II</span>
+            <h1>Aprendiendo CSS Moderno</h1>
+            <p>CSS permite controlar la presentación, distribución y
+                adaptación visual de una página web</p>
+            <a href="#cursos" class="boton">Ver Cursos</a>
+        </section>
+
+        <section id="cursos" class="cursos">
+            <div class="titulo-seccion">
+                <p class="subtitulo">Nuestros cursos</p>
+                <h2>Tecnologías que aprenderemos</h2>
+            </div>
+
+            <!--Contenedor para FlexBox-->
+            <div class="contenedor-cards">
+                <article class="card">
+                    <span class="card-numero">01</span>
+                    <h3>HTML</h3>
+                    <p>Define la estructura y el contenido de una página web</p>
+                    <a href="#" class="card-link">Ver Contenido</a>
+                </article>
+
+                <!--Card 2-->
+                <article class="card destacada">
+                     <span class="card-numero">02</span>
+                    <h3>CSS</h3>
+                    <p>Controla colores, tamaños, espacios, posiciones y
+                        diseño visual</p>
+                    <a href="#" class="card-link">Ver Contenido</a>
+                </article>
+
+                <!--Card 3-->
+                <article class="card">
+                     <span class="card-numero">03</span>
+                    <h3>JavaScript</h3>
+                    <p>Permite agregar comportamiento e interactividad
+                        a nuestras páginas</p>
+                    <a href="#" class="card-link">Ver Contenido</a>
+                </article>
+            </div>
+        </section>
+        <section class="demo-especificidad">
+            <h2>¿Qué estilo gana?</h2>
+            <p>CSS puede tener varias reglas intentando
+                modificar un mismo elemento</p>
+                <p id="mensaje" class="mensaje importante">
+                    Este texto será utilizado para ver quien gana</p>
+        </section>
+
+        <section class="perfil">
+            <div class="avatar">SB</div>
+            <div class="perfil-info">
+                <span class="perfil-rol">Desarrollador FullStack Java</span>
+                <h2>Sebastian Barros Gallardo</h2>
+                <p>Desarrollo de intefaces web utilizando tecnologias modernas</p>
+            </div>
+            <button class="boton secundario">Ver perfil</button>
+        </section>
+    </main>
+    <footer id="contacto">
+        <p>FullStack II - 2026 - Duoc UC Sede Puerto Montt</p>
+    </footer>
+</body>
+</html>

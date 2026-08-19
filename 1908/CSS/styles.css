@@ -1,0 +1,158 @@
+/*
+Variables 
+*/
+:root{
+    --color-principal: #2563eb;
+    --color-principal-oscuro: #1d4ed8;
+    --color-texto: #172033;
+    --color-texto-secundario: #64748b;
+    --color-fondo: #f8fafc;
+    --color-blanco: #fff;
+    --color-borde: #e2e8f0;
+    --radio: 12px;
+}
+
+/*Reset basico
+user-agent = navegador*/
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+    line-height: 1.5;
+}
+
+/*Selectores de CSS
+elemento -> p
+clase -> .card
+id -> #mensaje
+desendiente -> .nav a
+pseudo-clase -> :hover*/
+h2, h2, h3{
+    line-height: 1.2;
+}
+
+/*Header FlexBox*/
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: var(--color-blanco);
+    border-bottom: var(--color-borde);
+}
+
+.logo{
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--color-principal);
+}
+
+.nav{
+    display: flex;
+    gap: 24px;
+}
+
+.nav a{
+    color: var(--color-texto);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.nav a:hover{
+    color: var(--color-principal);
+}
+
+.hero{
+    padding: 100px 8%;
+    text-align: center;
+    background-color: var(--color-blanco);
+}
+
+.etiqueta{
+    display: inline-block;
+    padding: 6px 14px;
+    margin-bottom: 20px;
+    color: var(--color-principal);
+    background-color: #dbeafe;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.hero h1{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.hero p{
+    max-width: 650px;
+    margin: 0 auto 30px;
+    color: var(--color-texto-secundario);
+    font-size: 1.1rem;
+}
+
+.boton{
+    display: inline-block;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2 ease,
+                transform 0.2 ease;
+}
+
+.boton:hover{
+    background-color: var(--color-principal-oscuro);
+    transform: translateY(-2px);
+}
+
+.cursos{
+    padding: 80px 8%;
+}
+
+.titulo-seccion{
+    margin-bottom: 40px;
+}
+
+.subtitulo{
+    color: var(--color-principal);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.titulo-seccion{
+    margin-top: 8px;
+    font-size: 2rem;
+}
+
+.contenedor-cards{
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.card{
+    flex: 1;
+    min-height: 240px;
+    padding: 30px;
+    background-color: var(--color-blanco);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio);
+    box-shadow: 0 4px 14px rgb(0 0 0/ 12%);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgb(0 0 0/ 10%);
+}
