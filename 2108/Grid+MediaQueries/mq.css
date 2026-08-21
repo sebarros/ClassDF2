@@ -1,0 +1,37 @@
+body{
+    margin: 0;
+    padding: 30px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/*Escritorio // Desktop*/
+.tarjeta{
+    width: 600px;
+    margin: auto;
+    padding: 40px;
+    background-color: blueviolet;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+}
+
+/*Tablet // Tabletas*/
+@media(min-width: 768px) and (max-width: 1023px){
+    .tarjeta{
+        width: 80%;
+        padding: 30px;
+        background-color: chocolate;
+    }
+}
+
+/*Telefonos // Smartphones*/
+@media(max-width: 767){
+    .tarjeta{
+        width: auto;
+        padding: 10%;
+        background-color: deeppink;
+    }
+    .tarjeta h1{
+        font-size: 22px;
+    }
+}
