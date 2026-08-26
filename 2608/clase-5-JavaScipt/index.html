@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TecnoSur | JavaScript</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header class="encabezado">
+        <div>
+            <h1>TecnoSur</h1>
+            <p>Catálogo tecnológico</p>
+        </div>
+
+        <button id="btnTema" class="boton secundario" type="button">
+            Tema oscuro
+        </button>
+    </header>
+
+    <main class="contenedor">
+
+        <section class="bienvenida">
+            <p class="etiqueta">CLASE DE JAVASCRIPT</p>
+            <h2 id="saludo">Bienvenido</h2>
+            <p id="mensaje">Cargando contenido...</p>
+        </section>
+
+        <section class="resumen">
+
+            <article>
+                <span id="cantidadProductos">0</span>
+                <p>Productos</p>
+            </article>
+
+            <article>
+                <span id="totalStock">0</span>
+                <p>Unidades disponibles</p>
+            </article>
+
+            <article>
+                <span id="promedioPrecios">$0</span>
+                <p>Precio promedio</p>
+            </article>
+
+        </section>
+
+        <section class="herramientas">
+
+            <div class="campo">
+                <label for="buscador">Buscar producto</label>
+                <input
+                    id="buscador"
+                    type="search"
+                    placeholder="Escribe un nombre o categoría"
+                >
+            </div>
+
+            <div class="campo">
+                <label for="filtroStock">Filtrar productos</label>
+
+                <select id="filtroStock">
+                    <option value="todos">Todos</option>
+                    <option value="disponibles">Con stock</option>
+                    <option value="bajo">Stock bajo</option>
+                </select>
+            </div>
+
+            <div class="campo">
+                <label for="ordenPrecio">Ordenar por precio</label>
+
+                <select id="ordenPrecio">
+                    <option value="normal">Orden original</option>
+                    <option value="menor">Menor precio</option>
+                    <option value="mayor">Mayor precio</option>
+                </select>
+            </div>
+
+        </section>
+
+        <section class="catalogo">
+
+            <div class="titulo-seccion">
+                <div>
+                    <h2>Productos disponibles</h2>
+                    <p>Contenido creado dinámicamente con JavaScript</p>
+                </div>
+
+                <button id="btnAgregar" class="boton" type="button">
+                    Agregar audífonos
+                </button>
+            </div>
+
+            <!-- JavaScript agregará las tarjetas dentro de este elemento. -->
+            <div id="listaProductos" class="productos"></div>
+
+            <p id="sinResultados" class="sin-resultados" hidden>
+                No se encontraron productos.
+            </p>
+
+        </section>
+
+        <p id="estado" class="estado" aria-live="polite">
+            Catálogo actualizado.
+        </p>
+
+    </main>
+
+</body>
+</html>

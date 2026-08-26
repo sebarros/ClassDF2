@@ -1,0 +1,252 @@
+:root {
+    --fondo: #f3f4f2;
+    --superficie: #ffffff;
+    --texto: #242424;
+    --secundario: #686868;
+    --borde: #ddddda;
+    --acento: #166052;
+    --acento-hover: #104b40;
+    --alerta: #a33b2f;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--fondo);
+    color: var(--texto);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+body.oscuro {
+    --fondo: #191a1a;
+    --superficie: #252727;
+    --texto: #f2f2ef;
+    --secundario: #b7b7b2;
+    --borde: #3d4040;
+    --acento: #69b5a4;
+    --acento-hover: #84c7b8;
+}
+
+button,
+input,
+select {
+    font: inherit;
+}
+
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px max(24px, calc((100% - 1050px) / 2));
+    background-color: var(--superficie);
+    border-bottom: 1px solid var(--borde);
+}
+
+.encabezado h1 {
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+.encabezado p {
+    margin: 2px 0 0;
+    color: var(--secundario);
+}
+
+.contenedor {
+    width: min(1050px, calc(100% - 48px));
+    margin: 0 auto;
+    padding: 45px 0;
+}
+
+.bienvenida {
+    margin-bottom: 30px;
+}
+
+.etiqueta {
+    margin: 0 0 5px;
+    color: var(--acento);
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.bienvenida h2 {
+    margin: 0;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+}
+
+.bienvenida p:last-child {
+    margin: 8px 0 0;
+    color: var(--secundario);
+}
+
+.resumen {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 30px;
+    background-color: var(--superficie);
+    border: 1px solid var(--borde);
+    border-radius: 6px;
+}
+
+.resumen article {
+    padding: 20px;
+    border-right: 1px solid var(--borde);
+}
+
+.resumen article:last-child {
+    border-right: none;
+}
+
+.resumen span {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.resumen p {
+    margin: 3px 0 0;
+    color: var(--secundario);
+}
+
+.herramientas {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 40px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.campo label {
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.campo input,
+.campo select {
+    width: 100%;
+    padding: 10px 12px;
+    color: var(--texto);
+    background-color: var(--superficie);
+    border: 1px solid var(--borde);
+    border-radius: 5px;
+    outline: none;
+}
+
+.campo input:focus,
+.campo select:focus {
+    border-color: var(--acento);
+}
+
+.titulo-seccion {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 20px;
+}
+
+.titulo-seccion h2 {
+    margin: 0;
+}
+
+.titulo-seccion p {
+    margin: 3px 0 0;
+    color: var(--secundario);
+}
+
+.boton {
+    padding: 10px 16px;
+    color: #ffffff;
+    background-color: var(--acento);
+    border: 1px solid var(--acento);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background-color: var(--acento-hover);
+}
+
+.boton.secundario {
+    color: var(--texto);
+    background-color: transparent;
+    border-color: var(--borde);
+}
+
+.boton:disabled {
+    cursor: default;
+    opacity: 0.55;
+}
+
+.productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.producto {
+    padding: 22px;
+    background-color: var(--superficie);
+    border: 1px solid var(--borde);
+    border-radius: 6px;
+}
+
+.producto h3 {
+    margin: 0 0 15px;
+}
+
+.producto p {
+    margin: 5px 0;
+    color: var(--secundario);
+}
+
+.producto .precio {
+    color: var(--texto);
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.stock-bajo {
+    color: var(--alerta) !important;
+    font-weight: bold;
+}
+
+.sin-resultados {
+    padding: 25px;
+    text-align: center;
+    color: var(--secundario);
+    background-color: var(--superficie);
+    border: 1px solid var(--borde);
+}
+
+.estado {
+    min-height: 24px;
+    margin-top: 22px;
+    color: var(--secundario);
+}
+
+@media (max-width: 750px) {
+    .herramientas,
+    .resumen,
+    .productos {
+        grid-template-columns: 1fr;
+    }
+
+    .resumen article {
+        border-right: none;
+        border-bottom: 1px solid var(--borde);
+    }
+
+    .titulo-seccion {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
